@@ -1,3 +1,5 @@
 <template>
-  <div class="home">home</div>
+  <div class="home">
+    <el-button type="primary">welcome</el-button>
+  </div>
 </template>
