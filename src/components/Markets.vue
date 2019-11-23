@@ -1,9 +1,38 @@
 <template>
   <div class="mk">
-    <div class="mk-top">
+    <div class="mk-top app-color-dark2">
       <span>MARKETS</span>
-      <el-checkbox v-model="starOnly">Star Only</el-checkbox>
+      <el-checkbox class="mk-top__star" v-model="starOnly">
+        <span class="mk-star__yellow">★</span> Only
+      </el-checkbox>
       <el-input v-model="search" placeholder="Search..."></el-input>
+    </div>
+    <div class="mk-tabs">
+      <span
+        v-for="item in tabs"
+        :key="item.id"
+        :class="{'active': item.id===selectedTab}"
+        @click="chooseTab(item)"
+      >{{item.name}}</span>
+    </div>
+    <div class="mk-table">
+      <div class="mk-table-column app-color-dark3">
+        <span class="mk-star__yellow">★</span>
+        <span>Coin</span>
+        <span>Price</span>
+        <span>Vol</span>
+        <span>Chg</span>
+        <span>Name</span>
+      </div>
+      <div class="mk-table-column" v-for="(item, index) in tableData" :key="index">
+        <span class="mk-star__white">★</span>
+        <span>{{item.coin}}</span>
+        <span>{{item.price}}</span>
+        <span>{{item.vol}}</span>
+        <span>{{item.chg}}</span>
+        <span>{{item.name}}</span>
+      </div>
+      <span></span>
     </div>
   </div>
 </template>
@@ -13,9 +42,50 @@ export default {
   data() {
     return {
       starOnly: false,
-      search: ''
+      search: '',
+      selectedTab: 1
     }
   },
+  computed: {
+    tabs() {
+      return [
+        { id: 1, name: 'ETH' },
+        { id: 2, name: 'TUSD' },
+        { id: 3, name: 'USDC' },
+        { id: 4, name: 'EURS' },
+        { id: 5, name: 'DAI' }
+      ]
+    },
+    tableData() {
+      return [
+        { coin: 'ONT', price: 0.038239, vol: 466.20, chg: '+6.63%', name: 'Quant' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
+      ]
+    }
+  },
+  methods: {
+    chooseTab(item) {
+      this.selectedTab = item.id
+    }
+  }
 }
 </script>
 
@@ -26,10 +96,77 @@ export default {
 
 .mk-top {
   display: flex;
-  background: #0c2836;
+  align-items: center;
+  padding: 5px;
+  font-size: 13px;
 }
 
 .mk-top .el-input {
-  width: 200px;
+  width: 180px;
+}
+
+.mk-top__star {
+  margin: 0 20px;
+}
+
+.mk-tabs {
+  padding-top: 5px;
+}
+
+.mk-tabs span {
+  display: inline-block;
+  background: rgba(30, 103, 138, 0.1);
+  margin: 0 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.mk-tabs span.active {
+  background: #1e678a;
+}
+
+.mk-star__yellow {
+  font-size: 16px;
+  color: #fcf485;
+}
+
+.mk-star__white {
+  font-size: 16px;
+  color: #fff;
+}
+
+.mk >>> .el-checkbox__label {
+  color: #fff;
+}
+
+.mk >>> .el-input__inner {
+  background: #0c2836;
+  color: #fff;
+  border: 1px solid #195775;
+}
+
+.mk-table {
+  overflow-y: auto;
+  height: 400px;
+}
+
+.mk-table-column {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.mk-table-column:nth-child(odd) {
+  background: #0c2836;
+}
+
+.mk-table-column span {
+  flex: 1;
+}
+
+.mk-table-column span:first-child {
+  margin-left: 5px;
 }
 </style>
