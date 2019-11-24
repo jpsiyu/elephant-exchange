@@ -1,0 +1,13 @@
+:root{
+  --bg-color-depth1: #fff; 
+  --bg-color-depth2: #40aaee;
+  --bg-color-depth3: #4090aa;
+  --bg-color-depth4: #4093bb;
+  --bg-color-depth5: #409EFF;
+  --bg-color-depth6: #409EFF;
+
+  --tx-color-depth1: #1e678a;
+
+  --star-color-active: #fcf485;
+  --star-color-deactive: black;
+}

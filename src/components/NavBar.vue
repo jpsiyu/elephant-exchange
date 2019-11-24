@@ -5,6 +5,8 @@
       <span class="nb-mark">ELEDEX</span>
     </div>
     <div class="nb-right">
+      <span>{{isNight ? 'Night': 'Day'}}</span>
+      <el-switch class="nb-mode" v-model="isNight" @change="handleModeChange"></el-switch>
       <div class="nb-price">
         <span>ETH PRICE: $156.36 USD</span>
         <span>
@@ -32,9 +34,11 @@
 </template>
 
 <script>
+import storage from '@/scripts/storage'
 export default {
   data() {
     return {
+      isNight: true,
       selected: 2
     }
   },
@@ -52,12 +56,19 @@ export default {
       ]
     }
   },
+  created(){
+    this.isNight = storage.getMode() === 'night'
+  },
   methods: {
     chooseTab(item) {
       if (item.link) {
         this.selected = item.id
 
       }
+    },
+    handleModeChange(val) {
+      storage.setMode(val ? 'night' : 'day')
+      window.location.reload()
     }
   }
 }
@@ -97,6 +108,15 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+}
+
+.nb-mode {
+  margin-left: 10px;
+}
+
+.nb >>> .nb-mode.el-switch.is-checked .el-switch__core {
+  background-color: var(--bg-color--depth1);
+  border-color: var(--bg-color--depth1);
 }
 
 ul {

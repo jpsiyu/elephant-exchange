@@ -99,6 +99,7 @@ export default {
   align-items: center;
   padding: 5px;
   font-size: 13px;
+  background: var(--bg-color-depth1);
 }
 
 .mk-top .el-input {
