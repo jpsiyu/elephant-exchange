@@ -9,8 +9,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: var(--bg-color-depth1);
-  color: var(--tx-color-depth1);
+  background: var(--bg-color);
+  color: var(--content-color);
   box-sizing: border-box;
 }
 </style>

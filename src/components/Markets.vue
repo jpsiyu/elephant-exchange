@@ -91,7 +91,7 @@ export default {
 
 <style scoped>
 .mk {
-  border: 1px solid var(--bg-color-depth4);
+  border: 1px solid var(--border-makret);
 }
 
 .mk-top {
@@ -99,7 +99,8 @@ export default {
   align-items: center;
   padding: 5px;
   font-size: 13px;
-  background: var(--bg-color-depth1);
+  background: var(--bg-maket-top);
+  color: var(--content-market-top);
 }
 
 .mk-top .el-input {
@@ -116,14 +117,15 @@ export default {
 
 .mk-tabs span {
   display: inline-block;
-  background: var(--bg-color-depth6);
+  background: var(--bg-market-tab);
   margin: 0 2px;
   padding: 5px 10px;
   cursor: pointer;
+  color: var(--content-market-tab);
 }
 
 .mk-tabs span.active {
-  background: var(--bg-color-depth4);
+  background: var(--bg-market-tab-active);
 }
 
 .mk-star__yellow {
@@ -137,13 +139,13 @@ export default {
 }
 
 .mk >>> .el-checkbox__label {
-  color: var(--tx-color-depth1);
+  color: var(--content-market-top);
 }
 
 .mk >>> .el-input__inner {
-  background: var(--bg-color-depth2);
-  color: var(--tx-color-depth1);
-  border: 1px solid var(--bg-color-depth3);
+  background: var(--bg-market-input);
+  color: var(--content-color);
+  border: 1px solid var(--border-market-input);
 }
 
 .mk-table {
@@ -160,7 +162,7 @@ export default {
 }
 
 .mk-table-column:nth-child(odd) {
-  background: var(--bg-color-depth2);
+  background: var(--bg-market-table-odd);
 }
 
 .mk-table-column span {

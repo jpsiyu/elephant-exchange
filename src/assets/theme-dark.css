@@ -1,12 +1,19 @@
 :root{
-  --bg-color-depth1: #0b1725; 
-  --bg-color-depth2: #0c2836;
-  --bg-color-depth3: #195775;
-  --bg-color-depth4: #1e678a;
-  --bg-color-depth5: #10384b;
-  --bg-color-depth6: rgba(30, 103, 138, 0.1);
+  --bg-color: #0b1725;
+  --bg-maket-top: #0b1725;
+  --bg-market-input: #0c2836;
+  --bg-market-table-odd: #0c2836;
+  --border-market-input: #195775;
+  --border-makret: #1e678a;
+  --bg-market-tab: rgba(30, 103, 138, 0.1);
+  --bg-market-tab-active: #1e678a;
+  --bg-nav-hover: #1e678a;
+  --bg-nav-active: #10384b;
+  --bg-nav-shadow: #10384b;
 
-  --tx-color-depth1: #fff;
+  --content-color: #fff;
+  --content-market-top: #fff;
+  --content-market-tab: #fff;
 
   --star-color-active: #fcf485;
   --star-color-deactive: #fff;

@@ -1,13 +1,20 @@
 :root{
-  --bg-color-depth1: #fff; 
-  --bg-color-depth2: #40aaee;
-  --bg-color-depth3: #4090aa;
-  --bg-color-depth4: #4093bb;
-  --bg-color-depth5: #409EFF;
-  --bg-color-depth6: #409EFF;
+  --bg-color: #fff;
+  --bg-maket-top: #1e678a;
+  --bg-market-input: #fff;
+  --bg-market-table-odd: rgba(0, 104, 139, 0.1);
+  --border-market-input: #1e678a;
+  --border-makret: #1e678a;
+  --bg-market-tab: #88adbe;
+  --bg-market-tab-active: #23779f; 
+  --bg-nav-hover: rgba(20, 120, 161, 0.1);
+  --bg-nav-active:rgba(20, 120, 161, 0.2);
+  --bg-nav-shadow: rgba(200, 200, 200, 0.5);
 
-  --tx-color-depth1: #1e678a;
+  --content-color: #1e678a;
+  --content-market-top: #fff;
+  --content-market-tab: #fff;
 
-  --star-color-active: #fcf485;
-  --star-color-deactive: black;
+  --star-color-active: #e6d81b;
+  --star-color-deactive: #aaa;
 }
