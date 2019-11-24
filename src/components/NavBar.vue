@@ -69,7 +69,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  box-shadow: 0 1px 1px #333;
+  box-shadow: 0 1px 1px var(--bg-color-depth5);
 }
 
 .nb-left,
@@ -115,10 +115,10 @@ li {
 
 li.active:hover,
 li:hover {
-  background: #1e678a;
+  background: var(--bg-color-depth4);
 }
 
 li.active {
-  background: #10384b;
+  background: var(--bg-color-depth5);
 }
 </style>

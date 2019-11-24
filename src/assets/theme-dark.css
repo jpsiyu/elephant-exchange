@@ -1,19 +1,13 @@
-.app-color-dark1 {
-  background: #0b1725;
-}
+:root{
+  --bg-color-depth1: #0b1725; 
+  --bg-color-depth2: #0c2836;
+  --bg-color-depth3: #195775;
+  --bg-color-depth4: #1e678a;
+  --bg-color-depth5: #10384b;
+  --bg-color-depth6: rgba(30, 103, 138, 0.1);
 
-.app-color-dark2 {
-  background: #0c2836;
-}
+  --tx-color-depth1: #fff;
 
-.app-color-dark3 {
-  background: #195775;
-}
-
-.app-color-dark4 {
-  background: #1e678a;
-}
-
-.app-color-dark5 {
-  background: #10384b;
+  --star-color-active: #fcf485;
+  --star-color-deactive: #fff;
 }

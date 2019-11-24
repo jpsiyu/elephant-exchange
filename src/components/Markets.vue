@@ -91,7 +91,7 @@ export default {
 
 <style scoped>
 .mk {
-  border: 1px solid #1e678a;
+  border: 1px solid var(--bg-color-depth4);
 }
 
 .mk-top {
@@ -115,34 +115,34 @@ export default {
 
 .mk-tabs span {
   display: inline-block;
-  background: rgba(30, 103, 138, 0.1);
+  background: var(--bg-color-depth6);
   margin: 0 2px;
   padding: 5px 10px;
   cursor: pointer;
 }
 
 .mk-tabs span.active {
-  background: #1e678a;
+  background: var(--bg-color-depth4);
 }
 
 .mk-star__yellow {
   font-size: 16px;
-  color: #fcf485;
+  color: var(--star-color-active);
 }
 
 .mk-star__white {
   font-size: 16px;
-  color: #fff;
+  color: var(--star-color-deactive);
 }
 
 .mk >>> .el-checkbox__label {
-  color: #fff;
+  color: var(--tx-color-depth1);
 }
 
 .mk >>> .el-input__inner {
-  background: #0c2836;
-  color: #fff;
-  border: 1px solid #195775;
+  background: var(--bg-color-depth2);
+  color: var(--tx-color-depth1);
+  border: 1px solid var(--bg-color-depth3);
 }
 
 .mk-table {
@@ -159,7 +159,7 @@ export default {
 }
 
 .mk-table-column:nth-child(odd) {
-  background: #0c2836;
+  background: var(--bg-color-depth2);
 }
 
 .mk-table-column span {
