@@ -17,4 +17,8 @@ body.night{
 
   --star-color-active: #fcf485;
   --star-color-deactive: #fff;
+
+  --bg-quote: rgba(30, 103, 138, 0.1);
+  --bg-quote-header: #195775;
+  --bg-quote-body: #0b1725;
 }

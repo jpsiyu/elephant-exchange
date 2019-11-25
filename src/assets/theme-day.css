@@ -17,4 +17,8 @@ body.day{
 
   --star-color-active: #e6d81b;
   --star-color-deactive: #aaa;
+
+  --bg-quote: rgba(30, 103, 138, 0.1);
+  --bg-quote-header: rgba(0, 104, 139, 0.25);
+  --bg-quote-body: rgb(233, 233, 233);
 }

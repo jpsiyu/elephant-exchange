@@ -3,14 +3,17 @@
     <div class="home-left">
       <Markets />
     </div>
-    <div class="home-right"></div>
+    <div class="home-right">
+      <Quote />
+    </div>
   </div>
 </template>
 
 <script>
 import Markets from '@/components/Markets'
+import Quote from '@/components/Quote'
 export default {
-  components: { Markets }
+  components: { Markets, Quote }
 }
 </script>
 
