@@ -4,9 +4,9 @@
       <div class="bs-direct-top">
         <span>BUY IDEX</span>
         <span>0 ETH</span>
-        <i class="el-icon-refresh"></i>
+        <i class="bs-direct-clear el-icon-refresh"></i>
       </div>
-      <el-form label-position="left" label-width="60px">
+      <el-form class="bs-form" label-position="left" label-width="60px">
         <el-form-item label="Type" prop="type">
           <el-select v-model="formData.type">
             <el-option
@@ -30,6 +30,8 @@
           <span>ETH</span>
         </el-form-item>
       </el-form>
+      <el-button class="bs-btn-buy" type="success" v-if="item==='buy'" size="large">BUY</el-button>
+      <el-button class="bs-btn-sell" type="danger" v-if="item==='sell'" size="large">SELL</el-button>
     </div>
   </div>
 </template>
@@ -60,21 +62,59 @@ export default {
 
 <style scoped>
 .bs {
-  display: flex;
-}
-
-.bs-direct {
-  flex: 1;
-  border: 1px solid var(--border-makret);
-}
-
-.bs-direct-top{
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
 
+.bs-direct {
+  width: 49%;
+  border: 1px solid var(--makret-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bs-direct-top {
+  display: flex;
+  justify-content: space-between;
+  background: var(--buysell-top-bg);
+  color: var(--market-tab-content);
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bs-direct-clear{
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.bs-form {
+  padding: 10px;
+}
+
+.bs-form >>> .el-form-item__label {
+  color: var(--content-color);
+}
+
+.bs-form >>> .el-input__inner {
+  background: var(--bg-color);
+  border-color: var(--makret-border);
+  color: var(--content-color);
+}
+
 .bs-direct .el-select,
 .bs-direct .el-input {
-  width: 200px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.bs-btn-buy,
+.bs-btn-sell{
+  position: relative;
+  left: 10px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 </style>

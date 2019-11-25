@@ -81,7 +81,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  box-shadow: 0 1px 1px var(--bg-nav-shadow);
+  box-shadow: 0 1px 1px var(--nav-shadow-bg);
 }
 
 .nb-left,
@@ -136,10 +136,10 @@ li {
 
 li.active:hover,
 li:hover {
-  background: var(--bg-nav-hover);
+  background: var(--nav-hover-bg);
 }
 
 li.active {
-  background: var(--bg-nav-active);
+  background: var(--nav-active-bg);
 }
 </style>

@@ -1,31 +1,34 @@
 body.day{
   --bg-color: #fff;
-  --bg-maket-top: #1e678a;
-  --bg-market-input: #fff;
-  --bg-market-table-odd: rgba(0, 104, 139, 0.1);
-  --border-market-input: #1e678a;
-  --border-makret: #1e678a;
-  --bg-market-tab: #88adbe;
-  --bg-market-tab-active: #23779f; 
-  --bg-nav-hover: rgba(20, 120, 161, 0.1);
-  --bg-nav-active:rgba(20, 120, 161, 0.2);
-  --bg-nav-shadow: rgba(200, 200, 200, 0.5);
-
   --content-color: #1e678a;
-  --content-market-top: #fff;
-  --content-market-tab: #fff;
 
-  --star-color-active: #e6d81b;
-  --star-color-deactive: #aaa;
+  --market-top-bg: #1e678a;
+  --market-input-bg: #fff;
+  --market-table-odd--bg: rgba(0, 104, 139, 0.1);
+  --market-input-border: #1e678a;
+  --makret-border: #1e678a;
+  --market-tab-bg: #88adbe;
+  --market-tab-bg-active: #23779f; 
+  --market-top-content: #fff;
+  --market-tab-content: #fff;
 
-  --bg-quote: rgba(30, 103, 138, 0.1);
-  --bg-quote-header: rgba(0, 104, 139, 0.25);
-  --bg-quote-body: rgb(233, 233, 233);
+  --nav-hover-bg: rgba(20, 120, 161, 0.1);
+  --nav-active-bg:rgba(20, 120, 161, 0.2);
+  --nav-shadow-bg: rgba(200, 200, 200, 0.5);
 
-  --bg-charts: #fff;
-  --bg-charts-tabs: #1e678a;
-  --bg-charts-tab: #23779f;
-  --bg-charts-tab-hover: rgba(200, 200, 200, 0.5);
-  --bg-charts-tab-active: #88adbe;
-  --content-charts: #fff;
+  --star-active-bg: #e6d81b;
+  --star-deactive-bg: #aaa;
+
+  --quote-bg: rgba(30, 103, 138, 0.1);
+  --quote-header-bg: rgba(0, 104, 139, 0.25);
+  --quote-body-bg: rgb(233, 233, 233);
+
+  --charts-bg: #fff;
+  --charts-tabs-bg: #1e678a;
+  --charts-tab-bg: #23779f;
+  --charts-tab-hover-bg: rgba(200, 200, 200, 0.5);
+  --charts-tab-active-bg: #88adbe;
+  --charts-content: #fff;
+
+  --buysell-top-bg: #1e678a;
 }

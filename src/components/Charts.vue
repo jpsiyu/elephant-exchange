@@ -41,33 +41,33 @@ export default {
 .charts {
   margin-top: 10px;
   height: 520px;
-  border: 1px solid var(--border-makret);
-  background: var(--bg-charts);
-  color: var(--content-charts);
+  border: 1px solid var(--makret-border);
+  background: var(--charts-bg);
+  color: var(--charts-content);
   font-size: 14px;
 }
 
 .charts-tabs{
-  background: var(--bg-charts-tabs);
+  background: var(--charts-tabs-bg);
 }
 
 .charts-tab {
   display: inline-block;
-  background: var(--bg-charts-tab);
+  background: var(--charts-tab-bg);
   padding: 10px;
 }
 
 .charts-tab:hover {
   cursor: pointer;
-  background: var(--bg-charts-tab-hover);
+  background: var(--charts-tab-hover-bg);
 }
 
 .charts-tab--active {
-  background: var(--bg-charts-tab-active);
+  background: var(--charts-tab-active-bg);
 }
 
 .charts-tab--active:hover {
-  background: var(--bg-charts-tab-active);
+  background: var(--charts-tab-active-bg);
 }
 
 </style>

@@ -28,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-quote);
+  background: var(--quote-bg);
   font-size: 13px;
 }
 
@@ -51,17 +51,17 @@
 
 .qu-right__row {
   width: 600px;
-  background: var(--bg-quote-body);
+  background: var(--quote-body-bg);
   padding: 5px;
 }
 
 .qu-right__row:first-child{
-  background: var(--bg-quote-header)
+  background: var(--quote-header-bg)
 }
 
 .qu-right__row:last-child{
   display: flex;
   justify-content: center;
-  border-top: 1px solid var(--bg-quote-header)
+  border-top: 1px solid var(--quote-header-bg)
 }
 </style>
