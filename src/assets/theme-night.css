@@ -4,7 +4,7 @@ body.night{
 
   --market-top-bg: #0b1725;
   --market-input-bg: #0c2836;
-  --market-table-odd--bg: #0c2836;
+  --market-table-even--bg: #0c2836;
   --market-input-border: #195775;
   --makret-border: #1e678a;
   --market-tab-bg: rgba(30, 103, 138, 0.1);
@@ -31,4 +31,7 @@ body.night{
   --charts-content: #fff;
 
   --buysell-top-bg: #0c2836;
+
+  --orderbook-header-bg: rgb(25, 87, 117);
+  --orderbook-body-even: rgba(0, 104, 139, 0.1);
 }

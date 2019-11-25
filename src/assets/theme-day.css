@@ -4,7 +4,7 @@ body.day{
 
   --market-top-bg: #1e678a;
   --market-input-bg: #fff;
-  --market-table-odd--bg: rgba(0, 104, 139, 0.1);
+  --market-table-even--bg: rgba(0, 104, 139, 0.1);
   --market-input-border: #1e678a;
   --makret-border: #1e678a;
   --market-tab-bg: #88adbe;
@@ -31,4 +31,7 @@ body.day{
   --charts-content: #fff;
 
   --buysell-top-bg: #1e678a;
+
+  --orderbook-header-bg: rgb(234, 234, 234);
+  --orderbook-body-even: rgba(0, 104, 139, 0.1);
 }

@@ -161,8 +161,8 @@ export default {
   cursor: pointer;
 }
 
-.mk-table-column:nth-child(odd) {
-  background: var(--market-table-odd--bg);
+.mk-table-column:nth-child(even) {
+  background: var(--market-table-even--bg);
 }
 
 .mk-table-column span {
