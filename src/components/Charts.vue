@@ -40,7 +40,7 @@ export default {
 <style scoped>
 .charts {
   margin-top: 10px;
-  height: 520px;
+  height: 525px;
   border: 1px solid var(--makret-border);
   background: var(--charts-bg);
   color: var(--charts-content);
