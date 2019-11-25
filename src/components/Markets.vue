@@ -150,7 +150,7 @@ export default {
 
 .mk-table {
   overflow-y: auto;
-  height: 400px;
+  height: 560px;
 }
 
 .mk-table-column {
