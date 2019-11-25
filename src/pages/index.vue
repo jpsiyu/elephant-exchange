@@ -6,6 +6,7 @@
     <div class="home-right">
       <Quote />
       <Charts />
+      <BuyAndSell />
     </div>
   </div>
 </template>
@@ -14,8 +15,9 @@
 import Markets from '@/components/Markets'
 import Quote from '@/components/Quote'
 import Charts from '@/components/Charts'
+import BuyAndSell from '@/components/BuyAndSell'
 export default {
-  components: { Markets, Quote, Charts }
+  components: { Markets, Quote, Charts, BuyAndSell }
 }
 </script>
 
