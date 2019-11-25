@@ -56,7 +56,7 @@ export default {
       ]
     }
   },
-  created(){
+  created() {
     this.isNight = storage.getMode() === 'night'
   },
   methods: {
@@ -67,8 +67,9 @@ export default {
       }
     },
     handleModeChange(val) {
-      storage.setMode(val ? 'night' : 'day')
-      window.location.reload()
+      const mode = val ? 'night' : 'day'
+      storage.setMode(mode)
+      document.body.className = mode
     }
   }
 }
