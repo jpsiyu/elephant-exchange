@@ -21,4 +21,11 @@ body.day{
   --bg-quote: rgba(30, 103, 138, 0.1);
   --bg-quote-header: rgba(0, 104, 139, 0.25);
   --bg-quote-body: rgb(233, 233, 233);
+
+  --bg-charts: #fff;
+  --bg-charts-tabs: #1e678a;
+  --bg-charts-tab: #23779f;
+  --bg-charts-tab-hover: rgba(200, 200, 200, 0.5);
+  --bg-charts-tab-active: #88adbe;
+  --content-charts: #fff;
 }

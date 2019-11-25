@@ -31,5 +31,6 @@ export default {
 
 .home-right {
   flex: 3;
+  margin-left: 10px;
 }
 </style>

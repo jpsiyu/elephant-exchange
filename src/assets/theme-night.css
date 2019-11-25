@@ -21,4 +21,11 @@ body.night{
   --bg-quote: rgba(30, 103, 138, 0.1);
   --bg-quote-header: #195775;
   --bg-quote-body: #0b1725;
+
+  --bg-charts: rgb(13, 40, 54);
+  --bg-charts-tabs: rgb(13, 40, 54);
+  --bg-charts-tab: rgba(30, 103, 138, 0.1);
+  --bg-charts-tab-hover: #999;
+  --bg-charts-tab-active: #1e678a;
+  --content-charts: #fff;
 }
