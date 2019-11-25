@@ -42,7 +42,7 @@ export default {
     return {
       direct: ['buy', 'sell'],
       formData: {
-        type: '',
+        type: 1,
         price: '',
         amount: '',
         total: '',

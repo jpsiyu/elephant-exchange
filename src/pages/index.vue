@@ -2,6 +2,7 @@
   <div class="home">
     <div class="home-left">
       <Markets />
+      <MyBalance />
     </div>
     <div class="home-right">
       <Quote />
@@ -20,8 +21,9 @@ import Charts from '@/components/Charts'
 import BuyAndSell from '@/components/BuyAndSell'
 import OrderBook from '@/components/OrderBook'
 import TradeHistory from '@/components/TradeHistory'
+import MyBalance from '@/components/MyBalance'
 export default {
-  components: { Markets, Quote, Charts, BuyAndSell, OrderBook, TradeHistory }
+  components: { Markets, Quote, Charts, BuyAndSell, OrderBook, TradeHistory, MyBalance }
 }
 </script>
 

@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 body.day{
   --bg-color: #fff;
   --content-color: #1e678a;
@@ -34,4 +39,6 @@ body.day{
 
   --orderbook-header-bg: rgb(234, 234, 234);
   --orderbook-body-even: rgba(0, 104, 139, 0.1);
+
+  --balance-head-bg: #eaeaea;
 }
