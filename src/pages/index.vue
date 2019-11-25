@@ -8,6 +8,7 @@
       <Charts />
       <BuyAndSell />
       <OrderBook />
+      <TradeHistory />
     </div>
   </div>
 </template>
@@ -18,8 +19,9 @@ import Quote from '@/components/Quote'
 import Charts from '@/components/Charts'
 import BuyAndSell from '@/components/BuyAndSell'
 import OrderBook from '@/components/OrderBook'
+import TradeHistory from '@/components/TradeHistory'
 export default {
-  components: { Markets, Quote, Charts, BuyAndSell, OrderBook }
+  components: { Markets, Quote, Charts, BuyAndSell, OrderBook, TradeHistory }
 }
 </script>
 

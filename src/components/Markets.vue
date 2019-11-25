@@ -125,7 +125,7 @@ export default {
 }
 
 .mk-tabs span.active {
-  background: var(--market-tab-bg-active);
+  background: var(--market-tab-active-bg);
 }
 
 .mk-star__yellow {
