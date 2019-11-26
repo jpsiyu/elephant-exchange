@@ -1,8 +1,8 @@
 <template>
   <div class="ob">
-    <div class="ob-direct" v-for="(item, index) in directs" :key="index">
+    <div class="ob-direct" v-for="(direct, index) in directs" :key="index">
       <div class="ob-direct-top">
-        <span>{{item === 'asks' ? 'ASKS' : 'BIDS'}}</span>
+        <span>{{direct === 'asks' ? 'ASKS' : 'BIDS'}}</span>
         <span>Total: 5901972.43339052 IDEX</span>
       </div>
       <div class="ob-book">
@@ -13,11 +13,15 @@
           <span>Sum(ETH)</span>
         </div>
         <div class="ob-book-list">
-          <div class="ob-book-item" v-for="(item, index) in book" :key="index">
+          <div
+            class="ob-book-item"
+            v-for="(item, index) in (direct === 'asks' ? asksBook : bidsBook)"
+            :key="index"
+          >
             <span>{{item.price}}</span>
-            <span>{{item.idex}}</span>
-            <span>{{item.eth}}</span>
-            <span>{{item.sum}}</span>
+            <span>{{item.tradeAmount}}</span>
+            <span>{{item.baseAmount}}</span>
+            <span>{{item.baseAmount}}</span>
           </div>
         </div>
       </div>
@@ -29,28 +33,32 @@
 export default {
   data() {
     return {
-      directs: ['asks', 'bids']
+      directs: ['asks', 'bids'],
+      books: {}
     }
   },
   computed: {
-    book() {
-      return [
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-        { price: 0.00006881, idex: 4359.518341, eth: 0.3, sum: 0.3 },
-      ]
+    asksBook() {
+      return this.books.asks || []
+    },
+    bidsBook() {
+      return this.books.bids || []
+    }
+  },
+  mounted() {
+    this.socketInit()
+  },
+  methods: {
+    socketInit() {
+      const socket = new WebSocket(this.$common.wsUrl)
+      socket.onopen = () => {
+        socket.send('Hi server!')
+      }
+      socket.onclose = () => { }
+      socket.onmessage = event => {
+        this.books = JSON.parse(event.data)
+      }
+      socket.onerror = () => { }
     }
   }
 }
@@ -78,7 +86,7 @@ export default {
   justify-content: space-between;
 }
 
-.ob-book-list{
+.ob-book-list {
   height: 400px;
   overflow-y: auto;
 }
@@ -96,9 +104,11 @@ export default {
 
 .ob-book-item span {
   display: inline-block;
-  flex: 1;
+  width: 100px;
   text-align: left;
   font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ob-book-item:nth-child(even) {

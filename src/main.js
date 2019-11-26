@@ -2,8 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
 import router from './router'
-import '@/plugins/element'
 import storage from '@/scripts/storage'
+
+/**
+ * plugins
+ */
+import '@/plugins/element'
+import '@/plugins/common'
 
 import('@/assets/theme-night.css')
 import('@/assets/theme-day.css')
