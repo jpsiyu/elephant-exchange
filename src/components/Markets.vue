@@ -39,6 +39,7 @@
 
 <script>
 export default {
+  props: ['market'],
   data() {
     return {
       starOnly: false,
@@ -48,37 +49,18 @@ export default {
   },
   computed: {
     tabs() {
-      return [
-        { id: 1, name: 'ETH' },
-        { id: 2, name: 'TUSD' },
-        { id: 3, name: 'USDC' },
-        { id: 4, name: 'EURS' },
-        { id: 5, name: 'DAI' }
-      ]
+      if (!this.market) return []
+      const tabList = this.market.groups.map((e, index) => {
+        return {
+          id: index,
+          name: e.base
+        }
+      })
+      return tabList
     },
     tableData() {
-      return [
-        { coin: 'ONT', price: 0.038239, vol: 466.20, chg: '+6.63%', name: 'Quant' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-        { coin: 'XDB', price: 0.000239, vol: 143.20, chg: '-2.63%', name: 'digitalbits' },
-      ]
+      if (!this.market) return []
+      return this.market.groups[0].pairs
     }
   },
   methods: {
@@ -167,6 +149,8 @@ export default {
 
 .mk-table-column span {
   flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .mk-table-column span:first-child {

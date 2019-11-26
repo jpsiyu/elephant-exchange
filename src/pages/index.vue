@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <div class="home-left">
-      <Markets />
+      <Markets :market="base.market"/>
       <MyBalance />
     </div>
     <div class="home-right">
       <Quote />
       <Charts />
       <BuyAndSell />
-      <OrderBook />
+      <OrderBook :book="base.book"/>
       <TradeHistory />
     </div>
   </div>
@@ -23,7 +23,28 @@ import OrderBook from '@/components/OrderBook'
 import TradeHistory from '@/components/TradeHistory'
 import MyBalance from '@/components/MyBalance'
 export default {
-  components: { Markets, Quote, Charts, BuyAndSell, OrderBook, TradeHistory, MyBalance }
+  components: { Markets, Quote, Charts, BuyAndSell, OrderBook, TradeHistory, MyBalance },
+  data() {
+    return {
+      base: {}
+    }
+  },
+  mounted() {
+    this.socketInit()
+  },
+  methods: {
+    socketInit() {
+      const socket = new WebSocket(this.$common.wsUrl)
+      socket.onopen = () => {
+        socket.send('Hi server!')
+      }
+      socket.onclose = () => { }
+      socket.onmessage = event => {
+        this.base = JSON.parse(event.data)
+      }
+      socket.onerror = () => { }
+    }
+  }
 }
 </script>
 

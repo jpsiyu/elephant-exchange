@@ -31,34 +31,18 @@
 
 <script>
 export default {
+  props: ['book'],
   data() {
     return {
       directs: ['asks', 'bids'],
-      books: {}
     }
   },
   computed: {
     asksBook() {
-      return this.books.asks || []
+      return this.book ? this.book.asks : []
     },
     bidsBook() {
-      return this.books.bids || []
-    }
-  },
-  mounted() {
-    this.socketInit()
-  },
-  methods: {
-    socketInit() {
-      const socket = new WebSocket(this.$common.wsUrl)
-      socket.onopen = () => {
-        socket.send('Hi server!')
-      }
-      socket.onclose = () => { }
-      socket.onmessage = event => {
-        this.books = JSON.parse(event.data)
-      }
-      socket.onerror = () => { }
+      return this.book ? this.book.bids : []
     }
   }
 }
